@@ -291,6 +291,10 @@ public class NextLevel: NSObject {
             self.executeClosureAsyncOnSessionQueueIfNecessary {
                 self.configureSessionDevices()
                 self.updateVideoOrientation()
+                
+                DispatchQueue.main.async {
+                    self.deviceDelegate?.nextLevelDevicePositionChangeFullyFinished(self)
+                }
             }
         }
     }

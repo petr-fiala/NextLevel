@@ -87,7 +87,8 @@ public protocol NextLevelDeviceDelegate: AnyObject {
     func nextLevelDevicePositionWillChange(_ nextLevel: NextLevel)
     func nextLevelDevicePositionDidChange(_ nextLevel: NextLevel)
     func nextLevel(_ nextLevel: NextLevel, didChangeDeviceOrientation deviceOrientation: NextLevelDeviceOrientation)
-    
+    func nextLevelDevicePositionChangeFullyFinished(_ nextLevel: NextLevel)
+
     // format
     func nextLevel(_ nextLevel: NextLevel, didChangeDeviceFormat deviceFormat: AVCaptureDevice.Format)
     
